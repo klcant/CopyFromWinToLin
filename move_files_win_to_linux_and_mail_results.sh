@@ -10,9 +10,6 @@ if [ -e /mnt/win/folder/file*.xls ]
 then
 	# Move file(s) from mount to local directory
 	sudo mv /mnt/win/folder/file*.xls /home/user/arch/server/
-	
-	# Unmount the windows share
-	sudo umount /mnt/win/folder
 
 	# Email address email will be coming from
 	EMAIL="FirstName LastName <sender@domain.com>"
@@ -27,3 +24,6 @@ then
 	# Move file(s) to archive folder
 	sudo mv /home/user/arch/server/file*.xls /home/user/arch/server/subfldr/$(date +%Y%m%d)
 fi
+
+# Unmount the windows share
+sudo umount /mnt/win/folder
